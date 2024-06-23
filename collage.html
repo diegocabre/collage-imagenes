@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collage de imágenes</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .uno {
+      grid-area: uno;
+    }
+
+    .dos {
+      grid-area: dos;
+    }
+
+    .tres {
+      grid-area: tres;
+    }
+
+    .cuatro {
+      grid-area: cuatro;
+    }
+
+    .cinco {
+      grid-area: cinco;
+    }
+
+    .grid-container {
+      margin: auto;
+      background: white;
+      display: grid;
+      grid-template-areas:
+        "uno . tres"
+        "uno cinco cuatro"
+        ". . cuatro"
+        "dos dos cuatro";
+      grid-gap: 3px;
+      text-shadow: 1px 1px 1px black;
+      padding: 3px;
+    }
+
+    .grid-container>div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+      position: relative;
+    }
+
+    .grid-container div {
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid-container div:nth-child(1) {
+      background-image: url("/imgs/imagen-1.jpg");
+    }
+
+    .grid-container div:nth-child(2) {
+      background-image: url("/imgs/imagen-2.jpg");
+    }
+
+    .grid-container div:nth-child(3) {
+      background-image: url("/imgs/imagen-3.jpg");
+    }
+
+    .grid-container div:nth-child(4) {
+      background-image: url("/imgs/imagen-4.jpg");
+    }
+
+    .grid-container div:nth-child(5) {
+      background-image: url("/imgs/imagen-5.jpg");
+    }
+
+    .grid-container div:nth-child(6) {
+      background-image: url("/imgs/imagen-6.jpg");
+    }
+
+    .grid-container div:nth-child(7) {
+      background-image: url("/imgs/imagen-7.jpg");
+    }
+
+    .grid-container div:nth-child(8) {
+      background-image: url("/imgs/imagen-8.jpg");
+    }
+
+    .image-container {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: none;
+    }
+
+    .delete-button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Collage de imágenes</h1>
+  <div class="grid-container" style="width: 600px">
+    <div class="uno">
+      <div class="image-container">
+        <a class="delete-button" href="/deleteImg/imagen-1.jpg">X</a>
+      </div>
+      1
+    </div>
+    <div class="dos">
+      <div class="image-container">
+        <a class="delete-button" href="/deleteImg/imagen-2.jpg">X</a>
+      </div>
+      2
+    </div>
+    <div class="tres">
+      <div class="image-container">
+        <a class="delete-button" href="/deleteImg/imagen-3.jpg">X</a>
+      </div>
+      3
+    </div>
+    <div class="cuatro">
+      <div class="image-container">
+        <a class="delete-button" href="/deleteImg/imagen-4.jpg">X</a>
+      </div>
+      4
+    </div>
+    <div class="cinco">
+      <div class="image-container">
+        <a class="delete-button" href="/deleteImg/imagen-5.jpg">X</a>
+      </div>
+      5
+    </div>
+    <div>
+      <div class="image-container">
+        <a class="delete-button" href="/deleteImg/imagen-6.jpg">X</a>
+      </div>
+      6
+    </div>
+    <div>
+      <div class="image-container">
+        <a class="delete-button" href="/deleteImg/imagen-7.jpg">X</a>
+      </div>
+      7
+    </div>
+    <div>
+      <div class="image-container">
+        <a class="delete-button" href="/deleteImg/imagen-8.jpg">X</a>
+      </div>
+      8
+    </div>
+  </div>
+  <br />
+  <a href="/"><button>Subir otra imagen</button></a>
+</body>
+
+</html>
